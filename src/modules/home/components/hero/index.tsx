@@ -44,8 +44,8 @@ const Hero = () => {
             Discover new products and best possibilities
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            From checkout to global sales tax compliance, companies around the
-            world use Flowbite to simplify their payment stack.
+            A specialist label creating luxury essentials. Ethically crafted
+            with an unwavering commitment to exceptional quality.
           </p>
           <LocalizedClientLink
             href="/store"
