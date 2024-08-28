@@ -25,16 +25,9 @@ Combine Medusa's modules for your commerce backend with the newest Next.js 14 fe
   </a>
 </p>
 
-### Prerequisites
+### Screenshot
 
-To use the [Next.js Starter Template](https://medusajs.com/nextjs-commerce/), you should have a Medusa server running locally on port 9000.
-For a quick setup, run:
-
-```shell
-npx create-medusa-app@latest
-```
-
-Check out [create-medusa-app docs](https://docs.medusajs.com/create-medusa-app) for more details and troubleshooting.
+<img alt="Medusa logo" src="image.png">
 
 # Overview
 
