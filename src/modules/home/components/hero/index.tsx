@@ -1,8 +1,12 @@
+"use client"
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Image from "next/image"
 import HeroImage from "/public/hero.png"
+import React from "react"
+import Lottie from "react-lottie-player"
+import HeroAnimation from "../../../../../public/hero.json"
 // const Hero = () => {
 //   return (
 //     <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
@@ -73,7 +77,13 @@ const Hero = () => {
           </LocalizedClientLink>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img src={HeroImage.src} alt="hero" />
+          {/* <img src={HeroImage.src} alt="hero" /> */}
+          <Lottie
+            loop
+            animationData={HeroAnimation}
+            play
+            style={{ width: 500, height: 500 }}
+          />
         </div>
       </div>
     </section>

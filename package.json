@@ -38,6 +38,8 @@
     "axios": "^1.6.7",
     "formik": "^2.4.6",
     "lodash": "^4.17.21",
+    "lottie-react": "^2.4.0",
+    "lottie-web": "^5.12.2",
     "medusa-react": "^9.0.0",
     "next": "^14.0.0",
     "pg": "^8.11.3",
@@ -47,6 +49,7 @@
     "react-hyper-modal": "^1.2.16",
     "react-instantsearch-hooks-web": "^6.29.0",
     "react-intersection-observer": "^9.3.4",
+    "react-lottie-player": "^2.1.0",
     "tailwindcss-radix": "^2.8.0",
     "webpack": "^5",
     "yup": "^1.4.0"
