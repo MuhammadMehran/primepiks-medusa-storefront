@@ -76,12 +76,12 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         onMouseEnter={toggleState.open}
                         onMouseLeave={toggleState.close}
                       >
-                        {regions && (
+                        {/* {regions && (
                           <CountrySelect
                             toggleState={toggleState}
                             regions={regions}
                           />
-                        )}
+                        )} */}
                         <ArrowRightMini
                           className={clx(
                             "transition-transform duration-150",

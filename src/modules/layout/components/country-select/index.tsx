@@ -8,6 +8,7 @@ import ReactCountryFlag from "react-country-flag"
 import { StateType } from "@lib/hooks/use-toggle-state"
 import { updateRegion } from "app/actions"
 import { useParams, usePathname } from "next/navigation"
+import { useToggleState } from "@medusajs/ui"
 
 type CountryOption = {
   country: string
@@ -16,16 +17,16 @@ type CountryOption = {
 }
 
 type CountrySelectProps = {
-  toggleState: StateType
   regions: Region[]
 }
 
-const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
+const CountrySelect = ({ regions }: CountrySelectProps) => {
   const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
 
   const { countryCode } = useParams()
   const currentPath = usePathname().split(`/${countryCode}`)[1]
 
+  const toggleState: StateType = useToggleState()
   const { state, close } = toggleState
 
   const options: CountryOption[] | undefined = useMemo(() => {
@@ -54,7 +55,7 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
   }
 
   return (
-    <div>
+    <div onMouseEnter={toggleState.open} onMouseLeave={toggleState.close}>
       <Listbox
         as="span"
         onChange={handleChange}

@@ -4,8 +4,14 @@ import { getCategoriesList, getCollectionsList } from "@lib/data"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import CountrySelect from "@modules/layout/components/country-select"
+import { listRegions } from "@lib/data"
+import { Region } from "@medusajs/medusa"
 
 export default async function Footer() {
+  const regions: Region[] | null = await listRegions().then(
+    (regions) => regions
+  )
   const { collections } = await getCollectionsList(0, 6)
   const { product_categories } = await getCategoriesList(0, 6)
 
@@ -113,6 +119,7 @@ export default async function Footer() {
             © {new Date().getFullYear()} Medusa Store. All rights reserved.
           </Text>
           <MedusaCTA />
+          <CountrySelect regions={regions ?? []} />
         </div>
       </div>
     </footer>
