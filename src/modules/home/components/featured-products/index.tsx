@@ -12,7 +12,9 @@ export default async function FeaturedProducts({
 }) {
   return collections.map((collection) => (
     <li key={collection.id}>
-      <ProductRail collection={collection} region={region} />
+      {collection.handle !== "utils" && (
+        <ProductRail collection={collection} region={region} />
+      )}
     </li>
   ))
 }
